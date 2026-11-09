@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<section>
+    <h1 class="title">Home</h1>
+    <div class="product-grid">
+        {% for p in products %}
+        <div class="card">
+            <img src="{{ p.image }}" alt="{{ p.name }}">
+            <h2>{{ p.name }}</h2>
+            {% if p.qty == 0 %}
+                <p class="red">Not Available</p>
+            {% else %}
+                <p class="green">Available</p>
+            {% endif %}
+            <p class="price">${{ "%.2f"|format(p.price) }}</p>
+            {% if p.qty == 0 %}
+                <a class="btn">View</a>
+            {% else %}
+                <a href="{{ url_for('product_detail', pid=p.id) }}" class="btn">View</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock content %}

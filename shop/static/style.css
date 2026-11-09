@@ -1,0 +1,177 @@
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100dvh;
+    font-family: Verdana;
+    background-color:aliceblue;
+}
+
+.navbar {
+    padding: 0.3rem;
+    background-color: black;
+}
+
+.logo {
+    padding-right: 0.5rem;
+    color: chocolate;
+    font-weight: bold;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    padding-right: 0.5rem;
+}
+
+.link {
+    color: bisque;
+    text-decoration: none;
+}
+
+.active {
+    color: chocolate;
+}
+
+.container {
+    padding: 0 2rem 2rem 2rem;
+}
+
+.title {
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+
+.price {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cart-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-card img {
+    max-width: 100px;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+.total {
+    text-align: right;
+}
+
+.row {
+    padding: 8px 0;
+}
+
+.bar {
+    width: 300px;
+    height: 30px;
+    border: solid 1px chocolate;
+    border-radius: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+.submit {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    color: white;
+    background-color: chocolate;
+}
+
+.submit:hover {
+    background-color: orange;
+}
+
+.ancor a {
+    text-decoration: none;
+    color: chocolate
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    background-color: chocolate;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: orange;
+}
+
+.pay-btn {
+    background-color: #13a32b;
+}
+
+.pay-btn:hover {
+    background-color: #5ad46e;
+}
+
+.remove-btn {
+    background-color: #d63031;
+}
+
+.remove-btn:hover {
+    background-color: #ff7675;
+}
+
+.footer {
+    text-align: center;
+    color: bisque;
+    background-color: black;
+}
+
+.footer a {
+    text-decoration: none;
+    color: chocolate
+}

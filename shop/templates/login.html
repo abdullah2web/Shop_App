@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block content %}
+<section>
+    <h1 class="title">Login</h1>
+    <div class="product-grid">
+        <div class="card">
+            <form method="POST" action="">
+                <div>
+                    <img src="{{ url_for('static', filename='user.png') }}">
+                    {{ form.hidden_tag() }}
+                </div>
+                <div class="row">
+                    {% if form.email.errors %}
+                        {{ form.email(placeholder="Email", class="bar") }}
+                        <div> 
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>  
+                    {% else %}
+                            {{ form.email(placeholder="Email", class="bar") }}
+                    {% endif %}
+                </div>
+                <div class="row">
+                    {% if form.password.errors %}
+                        {{ form.password(placeholder="Password", class="bar") }}
+                        <div>
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.password(placeholder="Password", class="bar") }}
+                    {% endif %}
+                </div>
+                <div class="row">
+                    {{ form.remember() }}
+                    {{ form.remember.label() }}
+                </div>
+                <div class="row">
+                    {{ form.submit(class="submit") }}
+                </div>
+                <div class="row">
+                    <div class="ancor">
+                        <a href="{{ url_for('register') }}">Forgot Password?</a>
+                    </div>
+                </div>
+            </form>
+            <div class="ancor">
+                <p>Don't have an account? <a href="{{ url_for('register') }}">Rigister</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
